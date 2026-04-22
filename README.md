@@ -9,7 +9,8 @@ Gemini API と fal.ai API を切り替えて使え、単発の画像生成、IMG
 
 - 画像生成
   - Gemini / fal.ai を切り替えて画像生成
-  - `nano-banana` / `nano-banana 2` / `nano-banana-pro` を利用可能
+  - `nano-banana` / `nano-banana 2` / `nano-banana-pro` / `gpt-image-2/edit` を利用可能
+  - `gpt-image-2/edit` は fal.ai プロバイダー専用
   - アスペクト比、解像度、候補数、ネガティブプロンプトを設定可能
   - 画像入力付きの I2I に対応
 - IMG連
@@ -66,6 +67,7 @@ Gemini API と fal.ai API を切り替えて使え、単発の画像生成、IMG
   - `nano-banana`
   - `nano-banana-2`
   - `nano-banana-pro`
+  - `gpt-image-2/edit`（fal.ai のみ）
 - 指定できる項目
   - プロンプト
   - ネガティブプロンプト
@@ -73,6 +75,14 @@ Gemini API と fal.ai API を切り替えて使え、単発の画像生成、IMG
   - 解像度
   - 候補数 `1〜4`
   - fal.ai 利用時の出力形式 `PNG / JPEG / WebP`
+  - `gpt-image-2/edit` 利用時の Quality `low / medium / high`
+  - `gpt-image-2/edit` 利用時の Image Size
+    - Square HD (1024x1024): `square_hd`
+    - Square (512x512): `square`
+    - Portrait 3:4 (768x1024): `portrait_4_3`
+    - Portrait 9:16 (576x1024): `portrait_16_9`
+    - Landscape 4:3 (1024x768): `landscape_4_3`
+    - Landscape 16:9 (1024x576): `landscape_16_9`
 - I2I 入力
   - 最大 14 枚まで画像入力可能
   - ローカルファイル追加
@@ -96,6 +106,7 @@ fal.ai 側では以下のエンドポイントを利用しています。
 - `fal-ai/nano-banana`
 - `fal-ai/nano-banana-2`
 - `fal-ai/nano-banana-pro`
+- `openai/gpt-image-2/edit`（生成タブのみ、fal.ai 専用）
 
 ## IMG連機能
 
